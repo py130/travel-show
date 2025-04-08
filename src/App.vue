@@ -2,13 +2,13 @@
 import { ref } from 'vue'
 const apiResponse = ref('Loading...')
 import HelloWorld from './components/HelloWorld.vue'
-import { onMounted } from 'vue'
+import { onMounted } from "vue"
 
 onMounted(async () => {
   const response = await fetch('/api/joke')
   const data = await response.text()
-  apiResponse.value = data    
-  console.log(data)
+  apiResponse.value = data
+  var a = 123
 })
 </script>
 
