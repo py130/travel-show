@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const apiResponse = ref('Loading...')
-import HelloWorld from './components/HelloWorld.vue'
-import { onMounted } from "vue"
+import { ref } from "vue";
+const apiResponse = ref("Loading...");
+import HelloWorld from "./components/HelloWorld.vue";
+import { onMounted } from "vue";
 
 onMounted(async () => {
-  const response = await fetch('/api/joke')
-  const data = await response.text()
-  apiResponse.value = data
-  var a = 123
-})
+  const response = await fetch("/api/joke");
+  const data = await response.text();
+  apiResponse.value = data;
+  var a = { 1: 2 };
+});
 </script>
 
 <template>
@@ -22,7 +22,7 @@ onMounted(async () => {
     </a>
   </div>
   <div class="api-response">{{ apiResponse }}</div>
-<HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
