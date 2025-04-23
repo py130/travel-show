@@ -1,0 +1,18 @@
+{
+  // --- 通用配置 ---
+  "editor.tabSize": 2,
+
+  // --- prettier作为主要的格式化工具 ---
+  "editor.formatOnSave": true, // prettier 需要
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ]
+}

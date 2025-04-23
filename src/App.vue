@@ -8,7 +8,7 @@ onMounted(async () => {
   const response = await fetch("/api/joke");
   const data = await response.text();
   apiResponse.value = data;
-  var a = { 1: 2 };
+  // var a = 1;
 });
 </script>
 
