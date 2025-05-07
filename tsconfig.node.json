@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    /* 添加对node变量的声明支持 */
+    "types": ["node"],
+
     "forceConsistentCasingInFileNames": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
