@@ -9,8 +9,11 @@ const isPlaying = ref(false);
 const fetchPoem = async () => {
   const baseUrl = import.meta.env.VITE_API_BASE_URL;
   const response = await fetch(`${baseUrl}/amorous-poem`);
-  const data = await response.text();
-  apiResponse.value = data;
+  console.log("response:", response);
+  if (response.status === 200) {
+    const data = await response.text();
+    apiResponse.value = data;
+  }
 };
 
 const playMusic = () => {
