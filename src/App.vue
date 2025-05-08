@@ -4,7 +4,8 @@ import { ref, onMounted, onUnmounted } from "vue";
 const apiResponse = ref("...");
 let timer: ReturnType<typeof setInterval>; // 使用ReturnType动态获取类型
 const fetchPoem = async () => {
-  const response = await fetch("/api/amorous-poem");
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
+  const response = await fetch(`${baseUrl}/amorous-poem`);
   const data = await response.text();
   apiResponse.value = data;
 };
