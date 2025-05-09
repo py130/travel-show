@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
+import audioUrl from "./assets/music/夏恋.mp3";
 
 const apiResponse = ref("...");
 let timer: ReturnType<typeof setInterval>;
@@ -52,7 +53,7 @@ onUnmounted(() => {
   <transition name="fade" mode="out-in">
     <p class="api-response" :key="apiResponse">{{ apiResponse }}</p>
   </transition>
-  <audio ref="audio" src="./assets/music/夏恋.mp3" controls hidden></audio>
+  <audio ref="audio" :src="audioUrl" controls hidden></audio>
 </template>
 
 <style scoped>
