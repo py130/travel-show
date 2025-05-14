@@ -3,6 +3,7 @@ import { onMounted, onUnmounted } from "vue";
 import audioUrl from "@/assets/music/夏恋.mp3";
 import { useAudioPlayer } from "@/utils/audioPlayer";
 import { useFetchPoem } from "@/utils/fetchPoem";
+import { useRouter } from "vue-router";
 
 const { audio, initPlayMusic, destroyPlayMusic } = useAudioPlayer();
 const { apiResponse, initFetchPoem, destroyFetchPoem } = useFetchPoem();
@@ -20,6 +21,11 @@ onUnmounted(() => {
   // 销毁音乐
   destroyPlayMusic();
 });
+
+const router = useRouter();
+const toAbout = () => {
+  router.push("/wedding/about");
+};
 </script>
 
 <template>
@@ -29,6 +35,7 @@ onUnmounted(() => {
     <p class="api-response" :key="apiResponse">{{ apiResponse }}</p>
   </transition>
   <audio ref="audio" :src="audioUrl" controls hidden loop></audio>
+  <button @click="toAbout">跳转介绍页</button>
 </template>
 
 <style scoped>
