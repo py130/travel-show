@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import zipPack from "vite-plugin-zip-pack";
+import { resolve } from "path";
 
 export default defineConfig(({ mode }) => {
   // 加载环境变量
@@ -8,6 +9,11 @@ export default defineConfig(({ mode }) => {
 
   return {
     base: env.VITE_BASE_URL,
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "src"),
+      },
+    },
     plugins: [
       vue(),
       zipPack({
