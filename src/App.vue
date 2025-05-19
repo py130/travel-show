@@ -1,16 +1,13 @@
 <script setup lang="ts">
-// import HomePage from "@/pages/HomePage.vue";
+import HomePage from "@/pages/HomePage.vue";
+import PhotoPage from "@/pages/PhotoPage.vue";
+import AboutPage from "@/pages/AboutPage.vue";
 </script>
 
 <template>
-  <RouterLink to="/wedding">Go to Home</RouterLink> |
-  <RouterLink to="/wedding/about">Go to About</RouterLink>
-
-  <RouterView v-slot="{ Component }">
-    <transition name="fade" mode="out-in">
-      <component :is="Component" />
-    </transition>
-  </RouterView>
+  <HomePage />
+  <PhotoPage />
+  <AboutPage />
 </template>
 
 <style scoped></style>
