@@ -5,7 +5,7 @@ import iconSrc from "@/assets/image/久久.png";
   <div class="about-container background">
     <div class="about-content">
       <p style="margin-top: 20px" class="wedding-text">[ Wedding Day ]</p>
-      <p style="margin-top: 5px" class="wedding-text">诚邀您一起见证</p>
+      <p style="margin-top: 5px" class="normal-text">诚邀您一起见证</p>
       <p style="margin-top: 20px" class="normal-text">PY & CMY</p>
       <p style="margin-top: 20px" class="normal-text">结婚典礼</p>
       <p style="margin-top: 5px" class="normal-text">2026年xx月xx日 周x</p>
@@ -59,13 +59,12 @@ import iconSrc from "@/assets/image/久久.png";
 .wedding-text {
   font-family: "URW Chancery L", cursive;
   font-style: italic;
-  font-size: 20px;
+  font-size: 16px;
   color: #411f00;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .normal-text {
-  font-family: "Georgia", cursive;
+  font-family: "URW Chancery L", cursive;
   font-size: 16px;
   color: #411f00;
 }
@@ -79,11 +78,6 @@ import iconSrc from "@/assets/image/久久.png";
 .left-schedule {
   text-align: center;
 }
-
-.left-schedule p {
-  font-size: 12px;
-}
-
 .right-schedule {
   text-align: center;
 }
